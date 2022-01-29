@@ -9,9 +9,32 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210905.0/
+*	css3/tests/css1.css	/^*{$/;"	s
+FC(Formatting Contexts)	css3/README.md	/^## FC(Formatting Contexts)$/;"	s
+color	html5/tests/input.html	/^    <datalist id="color">$/;"	I
+div	css3/tests/css1.css	/^div{$/;"	s
 frontend-practice	README.md	/^# frontend-practice$/;"	c
-基础	html5/README.md	/^# 基础$/;"	c
+hhh	html5/index.html	/^        <h1 class="hh">hhh<\/h1>$/;"	h
+margin	css3/README.md	/^### margin$/;"	S	section:问题
+伪元素	css3/README.md	/^## 伪元素$/;"	s
+伪类	css3/README.md	/^## 伪类$/;"	s
+列表样式	css3/README.md	/^### 列表样式$/;"	S	section:常用样式
+单位	css3/README.md	/^## 单位$/;"	s
+基础	html5/README.md	/^## 基础$/;"	s
+塌陷问题	css3/README.md	/^### 塌陷问题$/;"	S	section:问题
+定位(position:relative/absolute/fixed/static)	css3/README.md	/^### 定位(position:relative\/absolute\/fixed\/static)$/;"	S	section:布局
+居中	css3/README.md	/^### 居中$/;"	S	section:问题
+布局	css3/README.md	/^## 布局$/;"	s
+常用样式	css3/README.md	/^## 常用样式$/;"	s
 引入	css3/README.md	/^## 引入$/;"	s
+文字样式	css3/README.md	/^### 文字样式$/;"	S	section:常用样式
 权重	css3/README.md	/^## 权重$/;"	s
+标准文档流	css3/README.md	/^### 标准文档流$/;"	S	section:布局
+浮动(float:left/right/none)	css3/README.md	/^### 浮动(float:left\/right\/none)$/;"	S	section:布局
+百分比	css3/README.md	/^### 百分比$/;"	S	section:问题
+盒子模型	css3/README.md	/^### 盒子模型$/;"	S	section:常用样式
 继承性	css3/README.md	/^## 继承性$/;"	s
+背景	css3/README.md	/^### 背景$/;"	S	section:常用样式
 选择器	css3/README.md	/^## 选择器$/;"	s
+问题	css3/README.md	/^## 问题$/;"	s
+隐藏元素	css3/README.md	/^### 隐藏元素$/;"	S	section:问题
