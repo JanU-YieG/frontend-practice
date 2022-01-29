@@ -3,11 +3,6 @@
 - style
 - @import
 
-## 选择器
-- 标签,`*`,id,class
-- 后代选择器` `
-- 交集选择器`.`
-- 并集选择器`,`
 
 ## 继承性
 - 文本属性可继承:text-,line-,font-
@@ -31,7 +26,8 @@
 - margin(margin-top,margin-right,margin-bottom,margin-left)
 - padding(padding-top,padding-right,padding-bottom,padding-left)
 - border(border-width,border-style,border-color),border-top/right/bottom/left[-width/style/color]
-### 背景
+- box-sizing: border-box:内减盒子模型--盒子宽度/高度=内容+padding+border ；content-box默认，外扩的--盒子宽度/高度=内容
+## 背景
 - 背景从padding开始渲染，一直到border。
 - background(background-color,background-image,background-position[-x/y],background-repeat,background-origin,background-clip,background-attachment,initial|inherit)
 - 百分比设置位置：（盒子宽度/高度-图片宽度/高度）%
@@ -58,11 +54,20 @@
 
 ## 伪元素
 - 该元素不在文档树中，可为其添加样式，必须设置content属性；
-- :before,:after
+- ::before,::after
+- ::first-letter,::first-line,::selection
 
 ## 伪类
 - :hover,:focus,:link,visited,:active
+- :checked：被选中的伪类
+- :disabled：不可用的表单元素伪类
+- :enabled：可用的表单元素伪类
+- :not(selector)：排除伪类，选择非selector元素的伪类
+- :target：选择当前活动的元素
+- :empty：空节点的伪类
+- :only-child：该元素是某个元素的唯一一个儿子的伪类
 - 不会出现在文档树中；可以添加到任何选择器的位置，而伪元素只能添加在最后一个简单选择器后面；伪类操作对象是文档树中存在的元素；
+- 节点（node）是js中的概念：页面中一切都可以看成是节点，包括元素节点，文本节点，属性节点等
 
 ## 单位
 - %,px,em,rem;in,cm,mm,pt,pc,ex,vw,vh,vmin,vmax
@@ -73,9 +78,30 @@
 - GFC(GridLayout Formatting Contexts)
 - FFC(Flex Formatting Contexts)
 
+## css3
+- border-radius(border-top-left-radius,border-top-right-radius,border-bottom-left-radius,border-bottom-right-radius):像素/百分比
+- rgba()(不会影响子元素，opacity会影响子元素),hsl(),hsla()
+- box-shadow
+- text-shadow(h-shadow,v-shadow,blur,color)
+- background-origin(处理背景图片；border-box/content-box/padding-box);background-clip(处理背景色和背景图片；border-box/padding-box/content-box);background-size(处理背景图片；px/%/cover/contain)
+- background-image:linear-gradient(direction,color-stop,color-stop1,......)；background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+- background:url(),url(),url()......:多背景；background其他属性设置也可以通过`,`分别设置对应背景图片相关信息
+- transition(transition-property,transition-duration,transition-timing-function,transition-delay):只要是数值型以及颜色都可以参与过渡；
+- 2D变换：transform(rotate/scale/skew/translate)
+- 动画：@keyframes name{ from/0%{} ..%{}  to/100%{}};animation: name duration timing-function delay iteration-count direction fill-mode play-state;
 
 
-
+## 选择器
+1. css2选择器
+- 标签,`*`,id,class
+- 后代选择器` `
+- 交集选择器`.`
+- 并集选择器`,`
+2. css3选择器
+- 属性选择器：[key],[key="value"],[key|="value"](以value-开头或value属性值),[key~="value"](包含value单词的元素),[key^="value"],[key$="value"],[key\*="value"];`img[alt][src $="0.jpg"]`
+- 子序列选择器：顺序：先按照n表达式计算匹配哪些子元素然后检查前面元素选择器是否匹配；:first-child(父元素下的第一个子元素)；:last-child(父元素下的最后一个子元素)；:nth-child(n)(n可以是表达式，n从1开始)；nth-last-child(n)(n从倒数第一个开始)；even,odd；直接n从1开始，表达式时an+m则n从0开始；
+- 子类型选择器：顺序：先检查前面元素选择器的匹配再进行n的计算；:first-of-type(匹配同级元素中同种类型的第一个元素); :last-of-type; :nth-of-type(n); :hth-last-of-type(n);
+- 关系节点选择器：`>`:子级选择器（只能选择儿子节点）；`+`：后面紧挨着的第一个亲兄弟；`～`：后面所有亲兄弟；
 
 
 
@@ -87,6 +113,8 @@
 ### 百分比
 - margin,padding使用百分比是相对于包含块的宽度
 - widht,height使用百分比是相对于包含块的宽度,高度
+- border-radiud使用百分比是宽度/高度对应的百分比计算
+- background-size百分比是图片和盒子宽度/高度对应百分比计算
 ### 隐藏元素
 - display:none---------不占位
 - visibility:hidden;------占位
